@@ -2,7 +2,7 @@ package com.bw.shop.domain;
 //审核状态的枚举类
 public enum Status {
 	
-	UNCHECKED(0,"未审"),CHENKED(1,"已审"),REJECT(2,"驳回");
+	UNCHECKED(0,"未审"),CHENKED(1,"已审"),REJECT(9,"驳回");
 	private Status(int code ,String name) {
 		this.code =code;
 		this.name =name;
@@ -23,5 +23,17 @@ public enum Status {
 		this.name = name;
 	}
 	
+	 public static Status get(int v) {
+	       
+		 for (Status e : values()) {
+	            if(e.getCode()==v) {
+	                return e;
+	            }
+	        }
+		return null;
+	    }
+	 
+	    
+
 
 }

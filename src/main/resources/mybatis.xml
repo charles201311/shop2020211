@@ -10,7 +10,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	</typeAliases>
 	 <!-- 类型处理器 -->
 	<typeHandlers>
-	  <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" 
+	  <typeHandler handler="com.bw.shop.domain.BaseEnumHandler" 
 	  javaType="com.bw.shop.domain.Status"/>
 	</typeHandlers>
 	
