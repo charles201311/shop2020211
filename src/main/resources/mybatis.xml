@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!-- 别名配置 -->
+	<typeAliases>
+		<package name="com.bw.shop.domain" />
+	</typeAliases>
+	 <!-- 类型处理器 -->
+	<typeHandlers>
+	  <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" 
+	  javaType="com.bw.shop.domain.Status"/>
+	</typeHandlers>
+	
+	<!-- 配置分页助手拦截器 -->
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+
+	</plugins>
+
+</configuration>
